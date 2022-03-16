@@ -21,6 +21,11 @@ export default function (props) {
     setModalVisible(false)
   }
 
+  const logout = () => {
+    setModalVisible(false)
+    navigation.navigate('Profile')
+  }
+
   const [showPass, setShowPass] = React.useState(false);
 
   const bgColor = useBreakpointValue({
@@ -267,7 +272,7 @@ export default function (props) {
                 Are you sure you want to close this account?
               </Text>
               <HStack space="2" w="100%" justifyContent="center">
-              <Button onPress={() => navigation.navigate('Profile')} flex={1} size="sm" borderRadius="4" variant="outline" borderColor="coolGray.400" _text={{
+              <Button onPress={() => logout()} flex={1} size="sm" borderRadius="4" variant="outline" borderColor="coolGray.400" _text={{
                 fontSize: 'sm',
                 fontWeight: 'medium',
                 color: 'coolGray.400'
