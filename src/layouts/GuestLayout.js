@@ -25,6 +25,8 @@ export default function GuestLayout(props) {
       }}>
           <Stack w="100%" maxW={{
           md: '1016px'
+        }} maxH={{
+          md: '580px'
         }} flex={{
           base: '1',
           md: undefined

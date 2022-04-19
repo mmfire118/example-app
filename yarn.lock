@@ -6882,9 +6882,9 @@ nanomatch@^1.2.9:
     to-regex "^3.0.1"
 
 native-base@^3.3.5:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-3.3.7.tgz#4bff8d90709ee05a582546bec9359c06a75da33f"
-  integrity sha512-pX33+su3yssPvvIFbXGkexSA7S+UAhaTMlcaVTtg5mvIltoPn0du2CyxH7CIJeFmtX5kaxOvEwu//JPhoOU4AQ==
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/native-base/-/native-base-3.4.1.tgz#cf465eaa22692ba94d04857d1fa4d135d108b569"
+  integrity sha512-nREAuWWfuVh9/BtHE3PHSS8YTnNhYCFEpqqfURRP5R7iArO0ZBeNVH7fmWVcn0H7Qe+7K2sjZQKuQjxDHPvLDA==
   dependencies:
     "@react-aria/focus" "^3.2.3"
     "@react-aria/utils" "^3.6.0"

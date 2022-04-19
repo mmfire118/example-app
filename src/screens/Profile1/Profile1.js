@@ -60,8 +60,14 @@ export default function EditAccount(props) {
     setOpen2(true)
   }
 
-  return <GuestLayout>
-      <VStack px="4" mt="4" mb="5" space="9">
+  return <GuestLayout title="Disable Account">
+        <KeyboardAwareScrollView
+          contentContainerStyle={{
+            flexGrow: 1,
+          }}
+          style={{ flex: 1 }}
+        >
+          <VStack px="4" mt="4" mb="5" space="9">
         <HStack space="2" justifyContent="space-between">
         <HStack flex="1" space="2" justifyContent="space-between" alignItems="center">
           <HStack space="2" alignItems="center">
@@ -100,51 +106,21 @@ export default function EditAccount(props) {
             <Text fontSize="3xl" fontWeight="bold" color="coolGray.50">
               Profile
             </Text>
-            <Text
-              fontSize="md"
-              fontWeight="normal"
-              _dark={{
-                color: 'coolGray.400',
-              }}
-              _light={{
-                color: 'primary.300',
-              }}
-            >
-              Tell us about yourself
-            </Text>
           </VStack>
         </VStack>
-        <KeyboardAwareScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-      }}
-      style={{ flex: 1 }}
-    >
-        <VStack
-        flex="1"
-        px="6"
-        py="0"
-        _light={{ bg: 'coolGray.50' }}
-        _dark={{ bg: 'coolGray.800' }}
-        justifyContent="space-between"
-        space="3"
-        borderTopRightRadius={{ base: '2xl', md: 'xl' }}
-        borderBottomRightRadius={{ base: '0', md: 'xl' }}
-        borderTopLeftRadius={{ base: '2xl', md: '0' }}
-      >
-      <VStack px={{
+          <VStack px={{
       base: 4,
       md: 8,
       lg: 32
     }} py={{
-      base: 8,
+      base: 16,
       md: 8
     }} borderRadius={{
       md: '8'
     }} _light={{
       borderColor: 'coolGray.200',
       bg: {
-        base: 'coolGray.50'
+        base: 'white'
       }
     }} _dark={{
       borderColor: 'coolGray.800',
@@ -154,8 +130,7 @@ export default function EditAccount(props) {
       }
     }} borderWidth={{
       md: '1'
-    }} borderBottomWidth="0" space="4">
-
+    }} borderBottomWidth="1" space="4">
         <FormControl isInvalid={'Title' in errors}>
             <FormControl.Label>Title</FormControl.Label>
             <Controller
@@ -724,8 +699,7 @@ export default function EditAccount(props) {
       }}>
           SUBMIT
         </Button>
-      </VStack>
-      </VStack>
+        </VStack>
       </KeyboardAwareScrollView>
     </GuestLayout>;
 }

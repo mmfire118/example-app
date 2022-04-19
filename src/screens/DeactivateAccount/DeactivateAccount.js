@@ -54,6 +54,12 @@ export default function (props) {
     };
   return <>
       <GuestLayout title="Disable Account">
+        <KeyboardAwareScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+      }}
+      style={{ flex: 1 }}
+    >
       <VStack px="4" mt="4" mb="5" space="9">
         <HStack space="2" justifyContent="space-between">
         <HStack flex="1" space="2" justifyContent="space-between" alignItems="center">
@@ -91,50 +97,33 @@ export default function (props) {
             </HStack>
           <VStack space="2">
             <Text fontSize="3xl" fontWeight="bold" color="coolGray.50">
-              Close My Account
+              Deactivate Account
             </Text>
           </VStack>
         </VStack>
-        <KeyboardAwareScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-      }}
-      style={{ flex: 1 }}
-    >
-        <VStack
-        flex="1"
-        px="6"
-        py="3"
-        _light={{ bg: 'white' }}
-        _dark={{ bg: 'coolGray.800' }}
-        justifyContent="space-between"
-        space="3"
-        borderTopRightRadius={{ base: '2xl', md: 'xl' }}
-        borderBottomRightRadius={{ base: '0', md: 'xl' }}
-        borderTopLeftRadius={{ base: '2xl', md: '0' }}
-      >
         <VStack px={{
-        base: 4,
-        md: 8
-      }} py={{
-        base: 4,
-        md: 8
-      }} borderRadius={{
-        md: '8'
-      }} _light={{
-        borderColor: 'coolGray.200',
-        bg: {
-          base: 'white'
-        }
-      }} _dark={{
-        borderColor: 'coolGray.800',
-        bg: {
-          md: 'coolGray.900',
-          base: 'coolGray.800'
-        }
-      }} borderWidth={{
-        md: '1'
-      }} borderBottomWidth="1" flex={1}>
+      base: 4,
+      md: 8,
+      lg: 32
+    }} py={{
+      base: 16,
+      md: 8
+    }} borderRadius={{
+      md: '8'
+    }} _light={{
+      borderColor: 'coolGray.200',
+      bg: {
+        base: 'white'
+      }
+    }} _dark={{
+      borderColor: 'coolGray.800',
+      bg: {
+        md: 'coolGray.900',
+        base: 'coolGray.800'
+      }
+    }} borderWidth={{
+      md: '1'
+    }} borderBottomWidth="1" space="4">
           <VStack space="4" mt="0">
             <Text fontSize="md" fontWeight="bold" _light={{
             color: 'coolGray.800'
@@ -148,7 +137,7 @@ export default function (props) {
                   control={control}
                   render={({ field: { onChange, value } }) => (
                     <TextArea onChangeText={(val) => onChange(val)}
-                    defaultValue={value} placeholder="Please enter the reason for closing your account." textAlignVertical={'top'} fontSize="sm" h="48" width="100%" _light={{
+                    defaultValue={value} placeholder="Please enter the reason for closing your account." h="40" fontSize="sm" width="100%" _light={{
                         borderColor: 'coolGray.300'
                     }} _dark={{
                         borderColor: 'coolGray.500'
@@ -249,8 +238,6 @@ export default function (props) {
             CONFIRM
           </Button>
           </HStack>
-          
-        </VStack>
         </VStack>
         </KeyboardAwareScrollView>
       </GuestLayout>
